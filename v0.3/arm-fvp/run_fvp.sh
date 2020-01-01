@@ -11,12 +11,13 @@
 	-C bp.hostbridge.userNetworking=true \
 	-C bp.dram_size=8 \
 	-C bp.smsc_91c111.enabled=true \
-	-C bp.virtioblockdevice.image_path=../../virtio-image/virtio-sd.img \
+	-C bp.virtioblockdevice.image_path=./sd.img \
 	--data cluster0.cpu0=./bl31.bin@0x04020000 \
 	--data cluster0.cpu0=./linux_kernel.img@0x80080000 \
 	--data cluster0.cpu0=./minos.bin@0xc0008000 \
 	--data cluster0.cpu0=./minos.dtb@0xc3e00000 \
 	--data cluster0.cpu0=./vm0.dtb@0x83e00000 \
 	--data cluster0.cpu0=./vm1.dtb@0x97e00000 \
-	--data cluster0.cpu0=./linux_kernel.img@0x90080000 \
-	--data cluster0.cpu0=./vm1_ramdisk.img@0x94000000
+	--data cluster0.cpu0=./linux_kernel.img@0x90280000 \
+	--data cluster0.cpu0=./vm1_ramdisk.img@0x94000000  \
+	--data cluster0.cpu0=./zephyr.bin@0x90000000
