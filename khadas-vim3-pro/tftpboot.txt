@@ -1,0 +1,1 @@
+tftp eb80c000 minos.bin;tftp ed600000 minos.dtb;tftp 10000000 vm0_dtb.img;tftp 0x108000 vm0_Image;tftp 0x80080000 vm1_Image;tftp 0x83e00000 vm1_dtb.img;tftp 0x84000000 vm1_ramdisk.img;tftp 0x88000000 zephyr.bin;booti 0xeb80c000 - 0x10000000
